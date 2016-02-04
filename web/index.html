@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>安全工具箱 - wifi绵羊墙</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+<body style="
+    background: #000000;
+">
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-8">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>
+							<a href='https://www.92aq.com/'>安全工具箱 </a>
+						</th>
+						
+					</tr>
+				</thead>
+				<tbody>
+					
+					<tr class="warning">
+						<td>
+							
+						</td>
+					
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>
+							#
+						</th>
+						
+					</tr>
+				</thead>
+				<tbody>
+				
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+<script>
+		setInterval(function()
+		{
+			$.get("d.json",function(data){
+			for(var i in data){
+								if(data[i]!==''){
+$(".col-md-4 tbody").prepend("<tr style='display:none' class=\"warning\"><td>"+data[i]+"</td></tr>");
+$(".col-md-4 tbody").children().first().show(1000);
+}
+			}
+			})
+		},6000)
+	</script>
+	<script>
+		setInterval(function()
+		{
+			$.get("o.json",function(data){
+			for(var i in data){
+				if(data[i]!==''){
+$(".col-md-8 tbody").prepend("<tr style='display:none' class=\"warning\"><td>"+data[i]+"</td></tr>");
+$(".col-md-8 tbody").children().first().show(1000);
+}
+				
+			}
+			})
+		},6000)
+	</script>
+  </body>
+</html>
